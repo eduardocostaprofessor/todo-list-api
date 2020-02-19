@@ -6,11 +6,23 @@ const routes = express.Router()
  */
 const UserController = require('./controllers/UserController')
 const NoteController = require('./controllers/NoteController')
+const IMCController = require('./controllers/IMCController')
 
 /*
  * rotas
  */
 
+//****************************** IMC ****************************** 
+
+routes.get('/IMC', IMCController.readAll)
+routes.post('/IMC', IMCController.insert)
+
+
+
+
+
+
+//****************************** IMC ****************************** 
 // users
 /**
  * Carrega todos os usuários

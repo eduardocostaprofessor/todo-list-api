@@ -10,7 +10,7 @@ module.exports = {
         const { page = 1 } = req.query
         const userId = req.body.userId
         await Note.find({userId})
-        notes = await Note.paginate({}, { page, limit: 5 })
+        notes = await Note.paginate({}, { page, limit: 50 })
 
         return res.json(notes)
     },
